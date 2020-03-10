@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import '../styles/main.css';
 import Carousel from '../atom/carousel';
 import Gallery from './Gallery';
+import Footer from './footer';
 
 class Main extends Component {
     state = {  }
@@ -10,10 +11,7 @@ class Main extends Component {
             <div className="main">
                 <Carousel />
                 <Gallery />
-                <Gallery />
-                <Gallery />
-                <Gallery />
-                <Gallery />
+                <Footer />
             </div>
          );
     }

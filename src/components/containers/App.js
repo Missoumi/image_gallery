@@ -18,26 +18,28 @@ class App extends Component {
       tl.progress();
     };
     var tl = new TimelineMax({ onUpdate: updatePercentage }); 
-    var tween1 = TweenMax.fromTo(".main", 0.2, {
-      y: "25vh"
-    }, {
-      y:"-50vh"
+    var tween1 = TweenMax.fromTo(".main", 0.1,{
+      y:'75vh'
+    },{
+      y:0
     });
     tl.add(tween1);
     const scene_1 = new ScrollMagic.Scene({
       triggerElement: "body",
       triggerHook: 0,
-      duration: "300px"
+      duration:  600,
     })
-      .setPin("body")
       .setTween(tl)
       .addIndicators()
       .addTo(this.state.controller);
+    
     
   }
   render() {
     return (
       <div className="App d-flex ">
+        <div className='scroll_anim'>
+        </div>
         <LeftBar />
         <Main />
       </div>

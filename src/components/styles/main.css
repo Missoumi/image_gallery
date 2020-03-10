@@ -1,4 +1,6 @@
 .main {
     margin-left: 50px;
     width: 100%; 
+    margin-top: -50vh;
+    z-index: 100;
 }

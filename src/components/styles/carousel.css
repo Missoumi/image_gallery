@@ -1,0 +1,13 @@
+.custom_carousel h1 {
+  font-weight: 400;
+}
+.custom_carousel {
+  width: 100%;
+  height: 50vh;
+  color: white;
+}
+
+.carousel_content {
+  animation-name: slow_visible, transform_y;
+  animation-duration: 2s;
+}

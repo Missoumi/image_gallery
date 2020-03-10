@@ -3,42 +3,55 @@ html {
 }
 body {
   min-height: 100%;
-  background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.466)),
-    url("assets/banner.jpg");
-  background-position-x: 50px;
-  background-size: 100%;
+  font-family: "Montserrat" !important;
 }
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-}
-
-.custom_carousel h1 {
-  font-weight: 400;
-}
-.custom_carousel {
+.scroll_anim {
+  position: absolute;
+  top: 0;
+  height: 75vh;
   width: 100%;
-  height: 50vh;
-  color: white;
+  background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.466)),
+    url("assets/banner.jpg");
+  background-position-x: 50px;
+  background-size: cover;
 }
-
-
 .gallery {
   background-color: white;
   flex-grow: 1;
   padding-left: 70px;
 }
-
+.gallery_images {
+  animation-name: slow_visible;
+  animation-duration: 2s;
+}
 .img_ {
   padding-left: 0 !important;
   padding-right: 0 !important;
+}
+
+.input_border {
+  border: 1px #57c7ff solid !important;
+}
+
+@keyframes slow_visible {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes transform_y {
+  from {
+    transform: translateY(50px);
+  }
+  to {
+    transform: translateY(0px);
+  }
 }
